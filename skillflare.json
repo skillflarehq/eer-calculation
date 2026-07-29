@@ -3,7 +3,7 @@
   "title": "Calculate EER for an R22 refrigeration cycle",
   "slug": "eer-calculation-refrigeration-r22",
   "version": 1,
-  "image": "webtop-default",
+  "image": "refrigeration",
   "duration_minutes": 45,
   "skills_assessed": [
     "Vapor-compression refrigeration cycle analysis",
