@@ -1,17 +1,17 @@
-# Docker challenge (example repo layout)
+# EER refrigeration challenge (Skillflare package)
 
-Canonical sketch of a **strict** Skillflare challenge package. Almost everything closed-world lives in `skillflare.json`; grader prose stays in `truth_pack.md`. Not loaded by the live app yet.
+Canonical Skillflare challenge package for a **thermodynamics calculation** work sample: vapor-compression cycle COP/EER and inverse Carnot comparison for a fixed R22 system. Closed-world content lives in `skillflare.json`; grader prose stays in `truth_pack.md`.
 
 | Path | Role |
 |------|------|
 | `skillflare.json` | Manifest (metadata, role, problem_statement, rubric, variation policy) |
 | `truth_pack.md` | Grader mark scheme (required `##` headings) |
-| `workspace/` | Candidate starter files |
+| `workspace/` | Candidate starter files (parameters + blank calculation template) |
 
-This example keeps a **shared** instance for every candidate: `shared_axes: []`, `problem_statement.mode: "locked"`, empty `sync_with` / `files`. When you add varyable files later, point `sync_with` at those `files[].path` values and list the story dimensions in `shared_axes`.
+This package keeps a **shared** instance for every candidate: `shared_axes: []`, `problem_statement.mode: "locked"`, empty `sync_with` / `files`. Candidates may use any tools they like for R22 properties; no property tables or answer keys are shipped under `workspace/`.
 
 ```bash
-node challenges/validate-challenge.mjs challenges/docker
+node challenges/validate-challenge.mjs challenges/eer-calculation
 ```
 
-Do not put solution Dockerfiles or answer keys under `workspace/`.
+Do not put solved calculations or answer keys under `workspace/`.
